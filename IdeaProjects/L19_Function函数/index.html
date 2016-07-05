@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS函数</title>
+</head>
+<body>
+    <!--<script>-->
+        <!--function demo() {-->
+            <!--var a = 10;-->
+            <!--var b = 11;-->
+            <!--var sum = a+b;-->
+            <!--alert(sum);-->
+        <!--}-->
+<!--//        var sum = demo(10,10);-->
+
+    <!--</script>-->
+    <!--<form>-->
+        <!--<input type="button" value="按钮" onclick="demo()">-->
+    <!--</form>-->
+    <br>
+    <br>
+    <br>
+
+    <script>
+        function demo(name,age) {
+            alert("hello:"+name+"我的年龄是:"+age);
+        }
+    </script>
+    <button onclick="demo('iwen',20)">按钮1</button>
+    <button onclick="demo('ime',200)">按钮2</button>
+    <br>
+    <br>
+    <br>
+    <p id="pid"></p>
+    <script>
+        function demo(a,b) {
+            if (a>b) {
+                return "a大";
+            } else {
+                return "b大";
+            }
+        }
+        document.getElementById("pid").innerHTML = demo(10,2);
+    </script>
+    <br>
+    <br>
+    <br>
+    <script>
+        function demo() {
+            var m = 10;
+        }
+        demo();
+        alert(m);
+    </script>
+</body>
+</html>

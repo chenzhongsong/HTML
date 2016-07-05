@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS内置对象</title>
+</head>
+<body>
+
+    1.什么是对象:
+        JS中的所有事物都是对象:字符串、数值、数组、函数
+        每个对象都带有属性和方法
+        JS允许自定义对象
+    2.自定义对象:
+        1):定义并创建对象
+        2):使用函数定义对象,然后创建新的对象实例
+    <br/>
+    <script>
+        people = new Object();
+        people.name = "iwen";
+        people.age = 20;
+        document.write("name:"+people.name+",age:"+people.age+"<br/>");
+
+
+        cat = {name:"mao",age:12};
+        document.write("name:"+cat.name+",age:"+cat.age+"<br/>");
+
+        //通过函数创建对象
+        function dogs(name,age) {
+            this.name = name;
+            this.age = age;
+        }
+        dog = new dogs("xiaohuang",12);
+        document.write("name:"+dog.name+",age:"+dog.age+"<br/>");
+        
+    </script>
+
+</body>
+</html>

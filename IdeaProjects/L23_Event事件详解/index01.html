@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM0级事件处理</title>
+</head>
+<body>
+    <div id="divid">
+        <button id="btnid">按钮</button>
+    </div>
+
+    <script>
+        var x = document.getElementById("btnid");
+        x.onclick = function () {
+            alert("这是一个DOM0级事件处理程序,把 一个函数赋值给一个事件处理程序01");
+            alert("这是一个DOM0级事件处理程序,把 一个函数赋值给一个事件处理程序02");
+            alert("这是一个DOM0级事件处理程序,把 一个函数赋值给一个事件处理程序03");
+        } //会被覆盖掉
+
+        x.onclick = function () {
+            alert("这是一个DOM0级事件处理程序,把 一个函数赋值给一个事件处理程序04");
+        }
+        x.onclick = function () {
+            alert("这是一个DOM0级事件处理程序,把 一个函数赋值给一个事件处理程序05");
+        }
+        x.onclick = null;  //取消事件
+    </script>
+</body>
+</html>

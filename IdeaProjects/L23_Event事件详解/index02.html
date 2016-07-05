@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM2级事件处理程序</title>
+</head>
+<body>
+    <div id="divid">
+        <button id="btnid" onclick="btnDeno()">按钮</button>
+    </div>
+
+    <script>
+        var btn1 = document.getElementById("btnid");
+        btn1.addEventListener("click",function () {
+            alert("DOM2级事件处理程序01")
+        });
+        btn1.addEventListener("click",demo02); //addEventListener("事件名","事件处理函数",bool值) true是事件捕获 false是事件冒泡
+        btn1.addEventListener("click",function () {
+            alert("DOM2级事件处理程序03")
+        }); //不会被覆盖
+
+        btn1.removeEventListener("click",demo02)
+
+        function demo02() {
+            alert("DOM2级事件处理程序02")
+        }
+    </script>
+</body>
+</html>

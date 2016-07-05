@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM修改属性</title>
+</head>
+<body>
+    <a id="aid" href="http://www.baidu.com">baidu</a>
+    <button onclick="shuxin()">a按钮</button>
+    <br>
+    <br>
+    <br>
+    <img src="2.jpg" id="imgid">
+    <br>
+
+    <button onclick="img()">img按钮</button>
+
+    <script>
+        function shuxin() {
+            document.getElementById("aid").innerHTML = "jekexueyuan";
+            document.getElementById("aid").href = "http://www.jikexueyuan.com";
+        }
+        function img() {
+            document.getElementById("imgid").src = "1.jpg";
+        }
+    </script>
+</body>
+</html>

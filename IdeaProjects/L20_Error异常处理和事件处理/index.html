@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS异常处理</title>
+</head>
+<body>
+    <script>
+//        var str = "10";
+//        try {
+//            alert(str);
+//        } catch (err) {
+//            alert(err);
+//        }
+    </script>
+    <br>
+    <br>
+    <br>
+    <form>
+        <input type="text" id="txt">
+        <input type="button" id="btn" onclick="demo()" value="按钮">
+    </form>
+    <script>
+        function demo() {
+            var e = document.getElementById("txt").value;
+            try {
+                if (e == "") {
+                    throw "这是一个空值";
+                }
+            } catch (err) {
+                alert(err);
+            }
+
+        }
+    </script>
+</body>
+</html>

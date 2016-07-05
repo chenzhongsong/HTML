@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM对象控制HTML详解-1</title>
+</head>
+<body>
+
+    1.方法：
+    getElementsByName() 获取name
+    getElementsByTagName 获取元素
+    getAttribute() 获取元素属性
+    setAttribute() 设置元素属性
+    childNodes() 访问子节点
+    parentNode() 访问父节点
+    createElement 创建元素节点
+    createTextNode() 创建文本节点
+    insertBefore()  插入节点
+    removeChild() 删除节点
+    offsetHeight 网页尺寸 不包含滚动条
+    scrollHeight 网页尺寸 包含滚动条
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <p name="pn">hello</p>
+    <p name="pn">hello</p>
+    <p name="pn">hello</p>
+    <p name="pn">hello</p>
+    <a id="aid" title="设置a元素的属性">a_hello</a>
+    <a id="aid2">aid2</a>
+    <ul><li>1</li><li>2</li><li>3</li></ul>
+    <div id="div">
+        <p id="pid">div的p元素</p>
+    </div>
+    <script>
+        function getNmae() {
+//            var count = document.getElementsByName("pn");
+            var count  = document.getElementsByTagName("p");
+            alert(count.length);
+            var p = count[2];
+            p.innerHTML = "world";
+        }
+//        getNmae();
+
+        function getAttribute() {
+            var aNode = document.getElementById("aid");
+            var attr = aNode.getAttribute("title");
+            alert(attr);
+        }
+//        getAttribute();
+
+        function setAttribute() {
+            var aid2 = document.getElementById("aid2");
+            aid2.setAttribute("title","动态设置属性");
+            var attr = aid2.getAttribute("title");
+            alert(attr);
+        }
+//        setAttribute();
+
+        function getChildNodes() {
+            var childNodes = document.getElementsByTagName("ul")[0].childNodes;
+            alert(childNodes.length);
+            alert(childNodes[0].nodeType);
+        }
+//        getChildNodes();
+
+        function getParentNodes() {
+            var parentNodes = document.getElementById("pid");
+            alert(parentNodes.parentNode.nodeName);
+        }
+//        getParentNodes();
+
+        function createNodes() {
+            var body = document.body;
+            var input = document.createElement("input");
+            input.type = "button";
+            input.value = "按钮";
+            body.appendChild(input);
+        }
+//        createNodes();
+
+        function addNodes() {
+            var div = document.getElementById("div");
+            var node = document.getElementById("pid");
+            var newNode = document.createElement("p");
+            newNode.innerHTML = "这是新添加的一个p元素";
+            div.insertBefore(newNode,node);
+        }
+//        addNodes();
+
+        function removeNodes() {
+            var div = document.getElementById("div");
+            var p = div.removeChild(div.childNodes[1]);
+            alert("删除成功");
+        }
+//        removeNodes();
+
+        function getSize() {
+            var width = document.documentElement.offsetHeight || document.body.offsetHeight;//这样写 所有浏览器都能兼容了。
+            var height = document.documentElement.offsetWidth;
+            alert(width+","+height);
+        }
+        getSize();
+
+    </script>
+
+</body>
+</html>

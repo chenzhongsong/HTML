@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS事件对象</title>
+    <link rel="stylesheet" type="text/css" href="mycss.css">
+</head>
+<body>
+
+
+    <!--1.事件对象-->
+    <!--在触发DOM事件的时候都会产生一个对象-->
+    <!--2.事件对象event:-->
+    <!--1):type:获取事件类型-->
+    <!--2):target:获取事件目标-->
+    <!--3):stopPropagation():阻止事件冒泡-->
+    <!--4):preventDefault():阻止事件默认行为-->
+    <!---->
+
+    <div class="div" id="divid">
+        <button id="btnid">按钮</button>
+        <a id="aid" href="http://www.baidu.com">baidu</a>
+        <button></button>
+    </div>
+
+    <script>
+        document.getElementById("btnid").addEventListener("mouseover",demo);
+        document.getElementById("divid").addEventListener("mouseover",showDiv);
+        document.getElementById("aid").addEventListener("mouseover",showA);
+        function demo(event) {
+//            alert(event.type);
+            alert(event.target);
+            event.stopPropagation();//阻止事件冒泡
+        }
+        function showDiv(event) {
+            event.preventDefault();
+            alert("showDiv");
+        }
+        function showA(event) {
+            event.stopPropagation();
+            event.preventDefault();
+        }
+    </script>
+</body>
+</html>

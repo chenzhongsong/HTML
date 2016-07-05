@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM操作css的样式</title>
+    <link rel="stylesheet" type="text/css" href="mycss.css">
+</head>
+<body>
+    <div class="div" id="divid">hello</div>
+    <button onclick="divDemo()">按钮</button>
+    <script>
+        function divDemo() {
+            document.getElementById("divid").style.color = "blue";
+        }
+    </script>
+</body>
+</html>

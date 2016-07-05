@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>IE事件处理</title>
+</head>
+<body>
+    <div id="divid">
+        <button id="btnid">按钮</button>
+        <button id="btnid02" onclick="btnDeno()">按钮</button>
+
+    </div>
+
+
+
+    <script>
+        var btn1 = document.getElementById("btnid");
+        if (btn1.attachEvent) {
+            btn1.attachEvent("onclick",demo02);//添加事件
+//            btn1.detachEvent("onclick",demo02);//移除事件
+        } else if (btn1.addEventListener) {
+            btn1.addEventListener("click",demo01)
+        } else {
+            btn1.onclick = demo03();
+        }
+
+        function demo01() {
+            alert("DOM2级事件处理");
+        }
+
+        function demo02() {
+            alert("IE事件处理");
+        }
+
+        function demo03() {
+            alert("DOM0级事件处理");
+        }
+
+        function btnDeno() {
+
+            var i = 10;
+            if (i < 20) {
+                alert("i<20");
+            } else if (i < 12) {
+                alert("i<12");
+            }
+
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JSDate日期对象</title>
+</head>
+<body onload="startTime()">
+
+    1.Date 处理日常日期和时间
+    2.获取当日日期
+    3.常用方法
+
+    <br/>
+    <br/>
+    <br/>
+
+    <script>
+        //获取当日日期
+//        var date = new Date();
+//        document.write(date+"<br/>");
+//        document.write(date.getFullYear()+"<br/>");//获取年
+//        document.write(date.getTime()+"<br/>");//获取毫秒数
+//        document.write(date.getDay()+"<br/>");//获取周几(天)
+//        date.setFullYear(2014,10,20);//重新设置日期
+//        document.write(date+"<br/>");
+//        document.write("<br/>"+"<br/>"+"<br/>"+"<br/>"+"<br/>");
+
+        //实例 时钟操作
+        function startTime() {
+            var date = new Date();
+            var h = date.getHours();
+            var m = date.getMinutes();
+            var s = date.getSeconds();
+            h = change(h);
+            m = change(m);
+            s = change(s);
+
+            document.getElementById("divid").innerHTML = h+":"+m+":"+s;
+            t = setTimeout(function () {
+                startTime();
+            },1000);
+
+        }
+        function change(i) {
+            if (i<10) {
+                i = "0"+i;
+            }
+            return i;
+        }
+
+
+    </script>
+    <div id="divid"></div>
+
+</body>
+</html>

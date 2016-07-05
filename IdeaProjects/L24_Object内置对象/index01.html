@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JSString对象</title>
+</head>
+<body>
+
+    1.String对象:
+    Sring对象用于处理已有字符串
+    字符串可以使用单引号或双引号
+    2.在字符串中查找字符串indexOf()
+    3.内容匹配match()
+    4.替换内容replace()
+    5.字符串大小写转换toUpperCase()/toLowerCase()
+    6.字符串转换为数组 split()
+    还有其他的
+    <br/>
+    <script>
+        var str1 = "hello,jike,xueyuan";
+        var str = "helLO world";
+        document.write("字符串长度:"+str.length+"<br/>");
+        document.write(str.indexOf(" ")+"<br/>");//输出下标
+        document.write(str.match("he")+"<br/>");
+        document.write(str.replace("world","jikexueyuan")+"<br/>");
+        document.write(str.toUpperCase()+"<br/>");
+        document.write(str.toLowerCase()+"<br/>");
+        var s = str1.split(",");
+        document.write(s[1]);
+    </script>
+</body>
+</html>

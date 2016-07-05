@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS的DOM对象</title>
+</head>
+<body>
+    <p>hello</p>
+    <p id="pid">hello</p>
+    <p>hello</p>
+    <p>hello</p>
+    <button onclick="demo()">按钮</button>
+    <button onclick="pid()">id按钮</button>
+    <button onclick="tag()">tag按钮</button>
+
+    <script>
+        function demo() {
+            document.write("world"); //不要在页面加载完后使用DOM,会覆盖掉页面的
+        }
+        function pid() {
+            document.getElementById("pid").innerHTML = "world";//改变HTML的内容,使用innerHTML
+
+        }
+        function tag() {
+            alert("alert");
+            document.getElementsByTagName("p");//寻找到相同元素的第一个元素
+        }
+    </script>
+</body>
+</html>

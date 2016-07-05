@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JSDOM的eventlistener</title>
+</head>
+<body>
+
+    <button id="btn" onclick="click()">按钮1</button>
+    <button id="btnid">按钮2</button>
+
+    <script>
+
+        document.getElementById("btn").addEventListener("click",function () {
+            alert("警告");
+        });
+
+        var btn = document.getElementById("btnid");
+        btn.addEventListener("click",hello); //句柄 使用句柄不会覆盖掉已有的事件
+        btn.addEventListener("click",world);
+        btn.removeEventListener("click",hello);//移除句柄
+        function hello() {
+            alert("hello");
+        }
+        function world() {
+            alert("world");
+        }
+
+    </script>
+</body>
+</html>

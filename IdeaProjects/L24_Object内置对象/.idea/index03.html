@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Array数组对象</title>
+</head>
+<body>
+
+    1、Array对象:使用单独的变量名来存储一系列的值
+    2、数组的创建;varmyArray=["Hello","iwen","ime"];
+    3、数组的访问:通过指定数组名以及索引号码,你可以访问某个特定的元素
+        注意:[0]是数组的第一个元素
+    4、数组常用方法;
+        concat():合并数组
+        sort():排序
+        push():末尾追加元素
+        reverse():数组元素翻转
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+
+    <script>
+        var a = ["hello","word"];
+        var b = ["iwen","ime"];
+        var c = a.concat(b);//合并
+        document.write(c+"<br/>");
+
+        var d = ["a","d","c","e"];
+        document.write(c.sort()+"<br/>");//sort()里面写函数没啥作用
+        var e = ["1","4","5","3"];
+        document.write(e.sort(function (a,b) {
+            return a-b;//升序 b-a是降序
+        })+"<br/>");
+
+        d.push("i");
+        document.write(d+"<br/>");
+        document.write(d.reverse()+"<br/>");
+
+    </script>
+
+</body>
+</html>

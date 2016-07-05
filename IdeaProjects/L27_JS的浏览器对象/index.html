@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Window对象</title>
+</head>
+<body>
+
+    课程概要：Widow对象  计时器  History对象  Location对象 Screen对象 Navigator对象  弹出窗口 Cookies <br/>
+
+    1、window对象：window对象是BOM的核心，window对象指当前浏览器窗口。所有JS全局对象、函数以及变量均自动成为window对象的成员。
+        全局变量是window对象的属性。全局函数是window对象的方法。甚至HTML DOM 的 document也是window对象的属性之一。
+    2、window尺寸：window.innerHeight - 浏览器窗口的内部高度。window.innerWidth - 浏览器窗口的内部高度。
+    3、window方法:window.open() - 打开新的窗口。 window.close() - 关闭新的窗口 <br/><br/><br/><br/>
+
+    <button id="btnid" onclick="btnClick()">按钮</button>
+    <script>
+//        window.document.write("高度:"+window.innerHeight+",宽度:"+window.innerWidth);
+
+        function btnClick() {
+//            window.open("https:www.baidu.com","百度一下","height = 300,width = 300, left = 200, top = 200, toolbar = no, menubar = no");
+            window.close();
+        }
+
+    </script>
+</body>
+</html>

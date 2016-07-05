@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS语法详解</title>
+</head>
+<body>
+    <p>i = 10;j = 3;m = i+j</p>
+    <p id="sumid">m = ?</p>
+    <button onclick="sum()">结果</button>
+    <script>
+        function sum() {
+            var i = 10;
+            var j = 3;
+            var m = i+=j;
+            document.getElementById("sumid").innerHTML = m;
+        }
+    </script>
+    <br/>
+    <br/>
+    <script>
+        var i = "10";
+        var j = 10;
+        document.write(i==j);
+    </script>
+    <br/>
+    <br/>
+    <script>
+        var i = 10;
+        if (i>=10) {
+            document.write("i>=10");
+        }
+    </script>
+    <br/>
+    <br/>
+
+    <script>
+        switch (i) {
+            case 1 :
+                document.write("1");
+                break;
+            case 10:
+                document.write("10");
+                break;
+            default:
+                document.write("其他");
+                break;
+        }
+    </script>
+    <br/>
+    <br/>
+    <br/>
+
+    <script>
+        var i = [1,2,3,4];
+        for(var j=0;j<4;j++) {
+            document.write(i[j] + "、" + "<br>");
+        }
+        for (var j in i) {
+            document.write(j + "、" + "<br>");
+        }
+    </script>
+    <br/>
+    <br/>
+    <br/>
+    <script>
+        var i = [1,2,3,4];
+        do {
+            document.write(i[0]);
+            i[0]++;
+        } while (i[0]<10) {document.write("呵呵呵")}
+    </script>
+    <br/>
+    <br/>
+    <br/>
+    <script>
+        for (var i=0;i<10;i++) {
+            if (i==5) {
+//                break;
+                continue;
+            }
+            document.write("i="+i+"<br>");
+        }
+    </script>
+    <br/>
+    <br/>
+    <br/>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Location对象</title>
+</head>
+<body>
+    1、Location对象：window.location对象用于获得当前页面的地址(url)，并把浏览器重定向到新的页面。
+    2、Location对象属性：location.hostname:返回web主机的域名。
+                        location.pathname:返回当前页面的路径和文件名。
+                        location.port:返回web主机的端口。
+                        location.protocal:返回所使用的web协议（http://或https://）
+                        location.href:返回当前页面的url
+                        location.assign():方法加载新的文档  <br/><br/><br/><br/><br/><br/>
+
+    <button id="btnid" onclick="getSomething()">按钮</button>
+    <br/><br/><br/><br/>
+    <button onclick="assign()">assign按钮</button>
+
+    <p id="pid"></p>
+    <script>
+        function getSomething() {
+            document.getElementById("pid").innerHTML = window.location.href;
+        }
+        function assign() {
+            location.assign("https://www.baidu.com");
+        }
+    </script>
+
+</body>
+</html>

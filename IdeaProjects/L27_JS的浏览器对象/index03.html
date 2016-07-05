@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>测试</title>
+</head>
+<body>
+
+    <a href="index02.html">后退到index02页面</a>
+    <button id="btnid" onclick="forward()">前进按钮</button>  <br/><br/><br/><br/><br/>
+
+
+
+    <form>
+        <input type="text" id="username">
+    </form>
+    <button id="btn" onclick="go()">go按钮</button>
+
+    <script>
+
+        function forward() {
+            history.forward();
+        }
+
+        function go() {
+            var name = document.getElementById("username").value;
+            if (name == "hello") {
+                history.go(-1);
+            } else {
+                alert("输入错误");
+            }
+        }
+
+    </script>
+</body>
+</html>

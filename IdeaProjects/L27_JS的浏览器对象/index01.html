@@ -4,9 +4,41 @@
     <meta charset="UTF-8">
     <title>计时器</title>
 </head>
-<body>
+<body onload="timeOut()">
+
+    1、计时事件：通过JS，我们有能力做到在一个指定的时间间隔之后来执行代码，而不是在函数被调用之后立即执行，我们称之为计时事件。
+    2、计时方法：1）setInterval() - 间隔指定的毫秒数不停的执行指定的代码
+                clearInterval() - 用于停止setInterval() 方法执行的函数代码
+               2）setTimeout() - 暂停指定的毫秒数后执行指定的代码
+                clearTimeout() - 用于停止执行setTimeout()方法的函数代码 <br/><br/><br/><br/><br/>
+
+    <p id="ptime"></p>
+    <br/>
+    <button onclick="stopTime()">setInterval按钮</button>
+    <button onclick="stopTimeOut()">setTimeout按钮</button>
     <script>
-        
+        var p = setInterval(function(){
+            getTime();
+        },1000);
+        function getTime(){
+            var t = new Date();
+            var s = t.toLocaleTimeString();
+            document.getElementById("ptime").innerHTML = s;
+        }
+        function stopTime() {
+            clearInterval(p);
+        }
+
+
+
+        var win;
+        function timeOut() {
+            alert("hello");
+            win = setTimeout(function(){timeOut()},3000);
+        }
+        function stopTimeOut() {
+            clearTimeout(win);
+        }
     </script>
 </body>
 </html>
